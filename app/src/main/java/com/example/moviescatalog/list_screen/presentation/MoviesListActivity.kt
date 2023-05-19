@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.moviescatalog.app.showErrorToast
 import com.example.moviescatalog.databinding.ActivityMoviesListBinding
+import com.example.moviescatalog.details_screen.MovieDetailsActivity
 import com.example.moviescatalog.list_screen.domain.models.LoadMoviesState
 import com.example.moviescatalog.list_screen.domain.models.MovieUiModel
 import com.example.moviescatalog.list_screen.presentation.adapter.MovieAdapter
@@ -92,6 +93,11 @@ class MoviesListActivity : AppCompatActivity() {
     }
 
     private fun navigateToDetailsScreen(movieUiModel: MovieUiModel) {
-
+        startActivity(
+            MovieDetailsActivity.getMovieDetailsIntent(
+                this,
+                movieUiModel
+            )
+        )
     }
 }
