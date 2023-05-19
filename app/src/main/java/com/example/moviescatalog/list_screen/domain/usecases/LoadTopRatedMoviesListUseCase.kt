@@ -11,7 +11,7 @@ class LoadTopRatedMoviesListUseCase @Inject constructor(private val moviesReposi
             return if (it.isSuccessful && it.body()?.results != null) {
                 LoadMoviesState.MoviesSuccessResponse(it.body()?.results?.toMoviesUiModel(), it.body()?.totalResults ?: 0)
             } else {
-                LoadMoviesState.MoviesFailResponse(it.body()?.statusMessage ?: "")
+                LoadMoviesState.MoviesFailResponse(it.body()?.statusMessage ?: it.message())
             }
         }
     }

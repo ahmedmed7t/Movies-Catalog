@@ -14,7 +14,7 @@ class LoadRevenueMoviesListUseCase @Inject constructor(private val moviesReposit
                     it.body()?.totalResults ?: 0
                 )
             } else {
-                LoadMoviesState.MoviesFailResponse(it.body()?.statusMessage ?: "")
+                LoadMoviesState.MoviesFailResponse(it.body()?.statusMessage ?: it.message())
             }
         }
     }
