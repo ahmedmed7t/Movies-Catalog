@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_110sdp"
+    android:layout_height="@dimen/_160sdp"
+    android:layout_marginEnd="@dimen/_6sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/teal_700">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/movieItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background"
+        android:scaleType="fitXY"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintBottom_toBottomOf="@id/movieItemImage"
+        android:src="@drawable/gradiant_black"
+        />
+
+    <TextView
+        android:id="@+id/movieItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/movieItemImage"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:textColor="@color/black"
+        tools:text="Movie Title"
+        />
+
+    <TextView
+        android:id="@+id/movieItemRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/movieItemRatingIcon"
+        app:layout_constraintTop_toTopOf="@id/movieItemRatingIcon"
+        app:layout_constraintBottom_toBottomOf="@id/movieItemRatingIcon"
+        android:layout_marginEnd="@dimen/_6sdp"
+        tools:text="6.5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/movieItemRatingIcon"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:src="@drawable/rating_icon"
+        app:layout_constraintTop_toBottomOf="@id/movieItemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
