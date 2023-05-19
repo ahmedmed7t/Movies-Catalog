@@ -20,14 +20,6 @@ fun RecyclerView.addPagination(
             if (visibleItemCount + firstVisibleItemPosition >= totalItemCount) {
                 loadMoreItems()
             }
-
-//           val lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition()
-//            val itemCount = layoutManager.itemCount
-//
-//            if (lastVisibleItemPosition == itemCount - 1) {
-//                loadMoreItems()
-//            }
-
         }
     })
 }

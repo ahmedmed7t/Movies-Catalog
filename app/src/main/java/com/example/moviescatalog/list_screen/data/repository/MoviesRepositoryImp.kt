@@ -15,5 +15,4 @@ class MoviesRepositoryImp @Inject constructor(private val moviesDataSource: Movi
 
     override suspend fun loadRevenueMovies(page: Int) =
         moviesDataSource.loadRevenueMovies(page = page)
-
 }

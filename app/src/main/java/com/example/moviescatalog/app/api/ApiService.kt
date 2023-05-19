@@ -7,7 +7,6 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface ApiService {
-
     @Headers("Accept: application/json")
     @GET("movie")
     suspend fun getAllMovies(
@@ -18,5 +17,4 @@ interface ApiService {
         @Query("page") page: Int,
         @Query("sort_by") sortBy: String,
     ): Response<BaseResponse<ArrayList<MovieModel>>>
-
 }

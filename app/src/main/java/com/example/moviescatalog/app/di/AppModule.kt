@@ -1,7 +1,5 @@
 package com.example.moviescatalog.app.di
 
-import android.content.Context
-import android.content.SharedPreferences
 import com.example.moviescatalog.BuildConfig
 import com.example.moviescatalog.app.api.ApiService
 import com.example.moviescatalog.app.models.ErrorInterceptor
