@@ -9,7 +9,7 @@ import retrofit2.http.*
 interface ApiService {
 
     @Headers("Accept: application/json")
-    @GET("/movie")
+    @GET("movie")
     suspend fun getAllMovies(
         @Header("Authorization") token: String = "Bearer ${BuildConfig.API_KEY}",
         @Query("include_adult") includeAdult: Boolean = false,

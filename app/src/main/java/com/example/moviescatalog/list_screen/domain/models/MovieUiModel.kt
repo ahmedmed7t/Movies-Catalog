@@ -1,6 +1,7 @@
 package com.example.moviescatalog.list_screen.domain.models
 
 data class MovieUiModel(
+    val id: Int,
     val backdropPath: String,
     val originalLanguage: String,
     val originalTitle: String,

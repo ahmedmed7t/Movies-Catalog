@@ -7,16 +7,16 @@ import retrofit2.Response
 interface MoviesDataSource {
     suspend fun loadPopularMovies(
         page: Int,
-        sortedBy: String = "popularity.asc"
+        sortedBy: String = "popularity.desc"
     ): Response<BaseResponse<ArrayList<MovieModel>>>
 
     suspend fun loadTopRatedMovies(
         page: Int,
-        sortedBy: String = "vote_count.asc"
+        sortedBy: String = "vote_count.desc"
     ): Response<BaseResponse<ArrayList<MovieModel>>>
 
     suspend fun loadRevenueMovies(
         page: Int,
-        sortedBy: String = "revenue.asc"
+        sortedBy: String = "revenue.desc"
     ): Response<BaseResponse<ArrayList<MovieModel>>>
 }

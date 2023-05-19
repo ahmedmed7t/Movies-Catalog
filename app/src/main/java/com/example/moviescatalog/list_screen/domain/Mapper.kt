@@ -5,15 +5,16 @@ import com.example.moviescatalog.list_screen.domain.models.MovieUiModel
 
 fun MovieModel.toMovieUiModel(): MovieUiModel {
     return MovieUiModel(
-        backdropPath = this.backdrop_path,
-        originalLanguage = this.original_language,
-        originalTitle = this.original_title,
-        overview = this.overview,
-        posterPath = this.poster_path,
-        releaseDate = this.release_date,
-        title = this.title,
-        voteAverage = this.vote_average,
-        voteCount = this.vote_count
+        id = this.id,
+        backdropPath = this.backdrop_path ?: "",
+        originalLanguage = this.original_language ?: "",
+        originalTitle = this.original_title ?: "",
+        overview = this.overview ?: "",
+        posterPath = this.poster_path ?: "",
+        releaseDate = this.release_date ?: "",
+        title = this.title ?: "",
+        voteAverage = this.vote_average ?: 0.0,
+        voteCount = this.vote_count ?: 0
     )
 }
 

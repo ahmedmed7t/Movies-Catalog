@@ -19,8 +19,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField 'String', 'BASE_URL', "\"https://api.themoviedb.org/3/discover\""
-        buildConfigField 'String', 'API_KEY', "\"114fe6670282f6a632638661e5e86dee\""
+        buildConfigField 'String', 'BASE_URL', "\"https://api.themoviedb.org/3/discover/\""
+        buildConfigField 'String', 'API_KEY', "\"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzN2EwMmY4MWJjZjczMTBhYTE1ZDRiNGIxMWQ2ZTgyMyIsInN1YiI6IjY0Njc2OGVlZDE4NTcyMDE4MDJjMmNmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8yf0t2wkqynBkR2ICLLcf2M2X2TFocq_OVVOWBuQGD4\""
     }
 
     buildTypes {
