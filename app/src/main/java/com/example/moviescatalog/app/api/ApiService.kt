@@ -2,6 +2,7 @@ package com.example.moviescatalog.app.api
 
 import com.example.moviescatalog.BuildConfig
 import com.example.moviescatalog.app.models.BaseResponse
+import com.example.moviescatalog.list_screen.data.models.MovieModel
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -16,6 +17,6 @@ interface ApiService {
         @Query("language") language: String = "en-US",
         @Query("page") page: Int,
         @Query("sort_by") sortBy: String,
-    ): Response<BaseResponse<Any>>
+    ): Response<BaseResponse<ArrayList<MovieModel>>>
 
 }

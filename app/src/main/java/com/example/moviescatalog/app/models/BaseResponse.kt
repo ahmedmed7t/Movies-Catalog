@@ -10,7 +10,7 @@ data class BaseResponse<T>(
     @SerializedName("total_results")
     val totalResults: Long?,
     @SerializedName("results")
-    val results: ArrayList<T>?,
+    val results: T?,
     @SerializedName("status_code")
     val status_code: Int?,
     @SerializedName("status_message")
