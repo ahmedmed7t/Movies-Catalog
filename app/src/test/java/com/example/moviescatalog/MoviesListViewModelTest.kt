@@ -72,24 +72,29 @@ class MoviesListViewModelTest {
 
     @Test
     fun `loadPopularMovies should update popularMoviesListState with success response`() = runBlockingTest {
+        // Mock the response from the use case
         val newState = LoadMoviesState.MoviesSuccessResponse(
             arrayListOf(),
             10
         )
         coEvery { popularMoviesListUseCase.loadMovies(any()) } returns newState
 
+        // Create an observer for the popularMoviesListState LiveData
         val observer = mockk<Observer<LoadMoviesState>>()
         every { observer.onChanged(any()) } just Runs
         viewModel.popularMoviesListState.observeForever(observer)
 
+        // Call the function to be tested
         viewModel.loadPopularMovies()
 
+        // Verify that the popularMoviesListState LiveData was updated with the expected value
         val expectedState = LoadMoviesState.MoviesSuccessResponse(
             arrayListOf(),
             10
         )
         verify { observer.onChanged(expectedState) }
 
+        // Clean up the observer
         viewModel.popularMoviesListState.removeObserver(observer)
     }
 
